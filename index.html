@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAWbahay</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS for custom styling -->
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PAWbahay</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+              <li><a class="dropdown-item" href="#contact">Contact</a></li>
+            </ul>
+          </li>
+          <a href="#contact" class="btn btn-transparent ms-lg-3">Contact</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <br>
+
+  <!-- Add margin to prevent content from overlapping the navbar -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <br>
+
+        <h1>PAWbahay</h1>
+        <p>Find a loving home for every animal.</p>
+        <a href="#" class="cta">View services</a>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" style="padding: 80px 20px;">
+    <header>
+        <div class="header-content">
+          <h1>Find your furry friend today</h1>
+          <p>At PAWbahay, we strive to make a difference in the lives of neglected and abused animals. Located at Legaspi Port, PH, our platform connects compassionate individuals with animals in need of loving homes. Together, let's promote responsible pet ownership and ensure better lives for our furry friends.</p>
+          <a href="#" class="btn">Get in Touch</a>
+        </div>
+        <div class="header-image">
+          <img src="https://images.unsplash.com/photo-1584102026323-27d7a9abd970?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dog behind a fence">
+        </div>
+      </header>
+    
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features" style="padding: 80px 20px;">
+    <h2>Find your loyal companion today!</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584102026323-27d7a9abd970?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Animal 1">
+        <h3>Animal Adoption</h3>
+        <p>Help your new pet find a loving <br>home through accessible listings.</p>
+        <a href="gallery.html" class="btn btn-primary">View</a> <!-- Add View button -->
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584102026323-27d7a9abd970?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Animal 2">
+        <h3>Surrender Requests</h3>
+        <p>Easily surrender animals with <br>simple online forms.</p>
+        <a href="gallery.html" class="btn btn-primary">View</a> <!-- Add View button -->
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584102026323-27d7a9abd970?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Animal 3">
+        <h3>Responsible Pet Ownership</h3>
+        <p>Embrace the joy of responsible <br>pet care and companionship.</p>
+        <a href="gallery.html" class="btn btn-primary">View</a> <!-- Add View button -->
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact" style="padding: 80px 20px;">
+    <h2>We're here to help you and animals.</h2>
+    <div class="contact-content">
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <div class="contact-info">
+        <h3>Get in touch</h3>
+        <p>Email: pawbahay@gmail.com</p>
+        <p>Location: Legaspi Port, PH</p>
+        <h3>Hours</h3>
+        <p>Mon - Fri: 9am - 5pm</p>
+        <p>Saturday: 10am - 4pm</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

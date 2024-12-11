@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAWbahay</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS for custom styling -->
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PAWbahay</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+              <li><a class="dropdown-item" href="#contact">Contact</a></li>
+            </ul>
+          </li>
+          <a href="#contact" class="btn btn-transparent ms-lg-3">Contact</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <br>
+        <h1>PAWbahay</h1>
+        <p>Find a loving home for every animal.</p>
+        <a href="#" class="cta">View services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery" style="padding: 60px 20px;">
+    <div class="container text-center">
+      <h2>Our Adorable Pets</h2>
+      <p>Browse through photos of our lovable animals waiting for a home.</p>
+      
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- First Image Card -->
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1574158622688-d06f7583f5b2?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDQ4fHxlbnVjaGF0ZWR8ZW58MHx8fHwxNjc5NzkwOTc0&ixlib=rb-1.2.1&q=80&w=1080" class="card-img-top" alt="Pet 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src, 0)">
+            <div class="card-body">
+              <h5 class="card-title">Pet 1</h5>
+              <p class="card-text">This sweet dog is looking for a loving home. Could it be yours?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Image Card -->
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1565577971-5a9b6d2d73ef?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDQxfHxlbnVjaGF0ZWR8ZW58MHx8fHwxNjc5NzkwOTc4&ixlib=rb-1.2.1&q=80&w=1080" class="card-img-top" alt="Pet 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src, 1)">
+            <div class="card-body">
+              <h5 class="card-title">Pet 2</h5>
+              <p class="card-text">This cute kitten is ready to bring joy to your home!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Image Card -->
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDZ8fHxlbnVjaGF0ZWR8ZW58MHx8fHwxNjc5NzkwOTg5&ixlib=rb-1.2.1&q=80&w=1080" class="card-img-top" alt="Pet 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src, 2)">
+            <div class="card-body">
+              <h5 class="card-title">Pet 3</h5>
+              <p class="card-text">A lovely pet that needs a forever home. Could it be yours?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Image Zoom -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Pet Image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="img-fluid" alt="Pet" style="width: 100%;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="prevImage()">Previous</button>
+          <button type="button" class="btn btn-secondary" onclick="nextImage()">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    let images = [
+      "https://images.unsplash.com/photo-1574158622688-d06f7583f5b2?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDQ4fHxlbnVjaGF0ZWR8ZW58MHx8fHwxNjc5NzkwOTc0&ixlib=rb-1.2.1&q=80&w=1080",
+      "https://images.unsplash.com/photo-1565577971-5a9b6d2d73ef?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDQxfHxlbnVjaGF0ZWR8ZW58MHx8fHwxNjc5NzkwOTc4&ixlib=rb-1.2.1&q=80&w=1080",
+      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDZ8fHxlbnVjaGF0ZWR8ZW58MHx8fHwxNjc5NzkwOTg5&ixlib=rb-1.2.1&q=80&w=1080"
+    ];
+    let currentIndex = 0;
+
+    function openModal(src, index) {
+      document.getElementById('modalImage').src = src;
+      currentIndex = index;
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+      document.getElementById('modalImage').src = images[currentIndex];
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+      document.getElementById('modalImage').src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>
